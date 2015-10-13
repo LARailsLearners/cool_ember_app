@@ -1,0 +1,9 @@
+<h3>To Do List</h3>
+
+{{input value=newTodo action="create"}}
+
+<ul>
+  {{#each model as |todo|}}
+    <li> {{todo.text}} </li>
+  {{/each}}
+</ul>
