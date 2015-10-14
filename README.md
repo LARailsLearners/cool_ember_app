@@ -1,53 +1,37 @@
-# Cool-ember-app
+We built this **cool_ember_app** and **cool_new_app** pair [last night](http://www.meetup.com/LA-Eastside-Ruby-Rails-Study-Group/events/225887815/) meetup.
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Ember app side
+### Installation
 
-## Prerequisites
+```
+git clone https://github.com/LARailsLearners/cool_ember_app.git
+cd cool_ember_app
+npm install
+bower install
+```
 
-You will need the following things properly installed on your computer.
+## Rails app side
+### Installation
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
+```
+git clone https://github.com/LARailsLearners/cool_new_app.git
+cd cool_new_app
+bundle install
+rake db:migrate
+```
 ## Running / Development
+### Rails app side
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```
+rails server
+```
+and let the ember app come and get JSON at [http://localhost:3000](http://localhost:3000)
+### Ember app side
 
-### Code Generators
+```
+ember server --proxy http://localhost:3000
+```
+and then visit [http://localhost:4200](http://localhost:4200).
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+--
+For any discussions, questions, please talk to other group members or come to [RubyMobs Slack](https://rubymobs.slack.com) group
